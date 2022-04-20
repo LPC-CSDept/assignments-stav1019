@@ -37,3 +37,22 @@ int main() {
     
     
     ofstream file ("numbers.txt");
+        srand(time(0));
+    for (int i=0;i<N;i++){
+      
+      
+       int x = getRdnum();
+       cout << x << ", ";
+       if (isGreater(x,num) != num){
+           file << num << ", " << endl;
+       }
+       
+       
+    }
+     file.close();
+    
+    
+    
+ 
+    
+    }
