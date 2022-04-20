@@ -17,4 +17,23 @@ int x;
       
       return x;
   }
- 
+  int isGreater(int a, int b){
+     
+    if (a > b){
+        num = a;
+        
+       
+     }
+     else if (b > a){
+         num = num;
+         
+     }
+       return a,b;
+     }
+     
+
+
+int main() {
+    
+    
+    ofstream file ("numbers.txt");
