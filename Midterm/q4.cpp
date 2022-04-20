@@ -16,7 +16,7 @@ int getRdnum(){
      srand(time(0));
     
     
-    x = (rand() % 50) + 1;
+    x = (rand() % 100) + 1;
    
     
     return x;
