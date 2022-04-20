@@ -1,7 +1,8 @@
 #include <iostream>
+using namespace std;
 int main()
 {
-   "testtesttesttest new orangeapple"
+   cout << "dontknowwhattodoanymore.orange/apple";
 }
 
 
