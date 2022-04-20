@@ -1,3 +1,5 @@
+//5
+
 #include <iostream>
 #include <fstream>
 
@@ -45,10 +47,12 @@ int main()
 {
    ofstream file ("question5.txt");
    
-  
-    while (num1 != num2){
-        
-    }
+  do{
+    getInput();
+    isSame();
+    intDivision();
+    file << divResult << ", " << endl;}
+    while (num1 != num2);
   
   file.close();
 }
