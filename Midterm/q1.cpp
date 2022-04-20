@@ -4,7 +4,11 @@ using namespace std;
 
 int main()
 {
-    cout<<"test";
-
-    return 0;
+    const  int N=5, M=5;
+    int     i, j;
+    for(i=0;i<N;i++) {
+        for(j=i; j<M-i; j++)
+            cout << " (" << i << "," << j << ") " ;
+        cout << endl;
+    }
 }
