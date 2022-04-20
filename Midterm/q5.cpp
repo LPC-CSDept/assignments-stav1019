@@ -38,3 +38,23 @@ int intDivision(){
     }
     return 0;
 }
+
+
+
+int main()
+{
+   ofstream file ("question5.txt");
+   
+  
+    while (num1 != num2){
+        
+    }
+  
+  file.close();
+}
+
+
+
+
+
+
