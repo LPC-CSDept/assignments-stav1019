@@ -16,51 +16,42 @@ void getRandnum(int &n1, int &n2, int &n3){
        n2 = (rand() % 100) + 1;
        n3 = (rand() % 100) + 1;
        
-         cout << n1 << "\n" << n2 << "\n" << n3;
+       
 }
 
 int findMin(int newN1, int newN2, int newN3){
     
     int minVal;
     
-    if (newN1 <= newN2 && newN1 <= newN3){
-        minVal = newN1;
+    if (n1 <= n2 && n1 <= n3){
+        minVal = n1;
     }
-    else if (newN2 <= newN1 && newN2 <= newN3){
-        minVal = newN2;
+    else if (n2 <= n1 && n2 <= n3){
+        minVal = n2;
     }
-    else if (newN3 <= newN1 && newN3 <= newN2){
-        minVal = newN3;
+    else if (n3 <= n1 && n3 <= n2){
+        minVal = n3;
     }
     
     x = minVal;
     
-    //cout << "\nyo: " << minVal;
+    
     
     return x;
 }
-
+void printResult(int n1, int n2, int n3, int x){
+    cout << n1 << "\n" << n2 << "\n" << n3;
+    cout << "\nmin: " << x;
+}
 
 int main()
 {
     
-    
-    
    getRandnum(n1, n2, n3);
    
-   int newN1 = n1;
-   int newN2 = n2;
-   int newN3 = n3;
+   findMin(n1, n2, n3);
    
-   //cout << newN1;
+   printResult(n1, n2, n3, x);
    
-   findMin(newN1, newN2, newN3);
-   
-   //int x = minVal;
-   
-   
-   cout << "\nmin: " << x;
-    
-    
-    return 0;
+      return 0;
 }
