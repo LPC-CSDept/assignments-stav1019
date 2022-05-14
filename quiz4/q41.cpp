@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 
 int main()
@@ -30,4 +30,63 @@ int main()
          cout << "\ncircle area: " << circleArea;  
          }
          
-    
+     }
+     else if (userinput == 2){
+         
+         int recLength;
+         int recWidth;
+         
+         cout << "please enter the length of the rectangle: ";
+         cin >> recLength;
+         cout << "\nplease enter the width of the rectangle: ";
+         cin >> recWidth;
+         
+           if (recLength < 0 || recWidth < 0){
+             cout << "error: inputs must be positive";
+             exit(0);
+         }
+         else {
+         
+         int recArea = recLength * recWidth;
+         
+         cout << "\nrectangle area: " << recArea;
+         
+     }
+     }
+     else if (userinput == 3){
+         
+         int triBase;
+         int triHeight;
+         
+         cout << "please enter the height of the triangle: ";
+         cin >> triHeight;
+         cout << "\nplease enter the base length of the triangle: ";
+         cin >> triBase;
+         
+         if (triBase < 0 || triHeight < 0){
+             cout << "error: inputs must be positive";
+             exit(0);
+         }
+         else {
+              int triArea = triBase * triHeight * 0.5;
+         
+         cout << "\ntriangle area: " << triArea;
+         }
+          }
+     else if (userinput == 4){
+         
+        
+         cout << "program closing ";
+        
+        exit(0);
+     }
+     else if (userinput > 4){
+         
+        
+         cout << "invalid selection, program closing ";
+        
+        exit(0);
+     }
+
+    return 0;
+}
