@@ -7,23 +7,42 @@ using namespace std;
 int main()
 {
    
-   int begin = 0;
+   int begin;
    int end;
    int i;
    
+   cout << "please enter a beginning value and click enter, then an end value, to make the range: ";
+   cin >> begin;
    cin >> end;
    
    if (end > 1300 || end < 2)
    {
-       cout << "Please re-enter an integer below 1300 and above zero" << endl;
+       cout << "invalid range, please try again: "  << endl;
+       cin >> begin;
        cin >> end;
    }
+      if (begin > 1300 || begin < 2)
+   {
+       cout << "invalid range, please try again: " << endl;
+       cin >> begin;
+       cin >> end;
+   }
+      if (begin >= end)
+      {
+            cout << "invalid range, please try again: " << endl;
+       cin >> begin;
+       cin >> end;
+      }
+   
       else
    {
        
        for(i=1;pow(2,i)<end;i++)
        {
-       cout << pow(2,i) << endl;
+           if (pow(2,i) >= begin){
+                cout << pow(2,i) << endl;
+           } 
+      
        }
    }
   

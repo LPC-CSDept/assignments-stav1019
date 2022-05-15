@@ -11,6 +11,7 @@ int main()
    int nthPower = 1;
    float invertnthPower;
    
+   cout << "please enter a number: ";
    cin >> n;
    
    if (n > 0)
@@ -20,7 +21,7 @@ int main()
        {
        nthPower *=2;
        }
-      cout << nthPower << endl;
+      cout << "2 to the power of " << n << " is: " << nthPower << endl;
    }
    else if (n<0)
    {
@@ -30,7 +31,7 @@ int main()
        nthPower *=2;
        }
        invertnthPower=1.0/nthPower;
-        cout << invertnthPower << endl;
+        cout << "2 to the power of " << n << " is: " << invertnthPower << endl;
    }
    else 
    {
