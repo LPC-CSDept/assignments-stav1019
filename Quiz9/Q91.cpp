@@ -4,7 +4,7 @@
 using namespace std;
 
 
-struct Employee{
+struct Employees{
     int id;
     string name;
     int salary;
@@ -15,6 +15,21 @@ struct Employee{
 
 int main()
 {
-   
+   Employees e[50];
     
 }
+
+int makeEmployeeStructArray(Employees e[]){
+    
+    ifstream ifs;
+    int idx;
+    
+     ifs.open("employee.txt");
+    if (ifs){
+        idx = 0;
+        ifs >> e[idx].id >> e[idx].name >> e[idx].salary >> e[idx].depName >> e[idx].date;
+             idx += 1;
+        }
+    
+        return idx;
+    }
