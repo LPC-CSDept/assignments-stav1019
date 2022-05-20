@@ -6,7 +6,8 @@ using namespace std;
 
 struct Employees{
     int id;
-   // string name;
+    string name1;
+    string name2;
     double salary;
     string depName;
     string date;
@@ -25,9 +26,7 @@ int main()
     for (int i = 0; i < employeeNum; i++){
         printEmployee(e[i]);
     }
-   //printEmployees(e[i]);
-    //cout << e.id << "\n" << e.name << "\n" << e.salary << "\n" << e.depName << "\nsum: " << e.date;
-    
+  
 }
 
 int makeEmployeeStructArray(Employees e[]){
@@ -38,16 +37,17 @@ int makeEmployeeStructArray(Employees e[]){
      ifs.open("employee.txt");
     if (ifs){
         idx = 0;
-        ifs >> e[idx].id >> e[idx].salary >> e[idx].depName >> e[idx].date;
+        ifs >> e[idx].id >> e[idx].name1 >> e[idx].name2 >> e[idx].salary >> e[idx].depName >> e[idx].date;
              idx += 1;
         }
     
         return idx;
     }
- //void findEmployee(Employees e[], int numofRecords, string username);   
+   void findEmployee(Employees e[], int numofRecords, string username);   
     
     void printEmployee(Employees e){
-    cout << e.id << "\n" << e.salary << "\n" << e.depName << "\n" << e.date;
+    cout << "ID: " <<  e.id << " Name: " << e.name1 << " " << e.name2 << " salary: " << e.salary << " department: " << e.depName << " date: " << e.date;
+    //<< "\n" << e.depName << "\n" << e.depName << "\n" << e.id;
     }
     
     
