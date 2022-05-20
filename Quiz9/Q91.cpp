@@ -16,16 +16,21 @@ struct Employees{
 
 int makeEmployeeStructArray(Employees e[]);
 void printEmployee(Employees e);
+void findEmployee(Employees e[], int employeeNum);
 
 int main()
 {
    Employees e[1];
    int employeeNum;
    employeeNum = makeEmployeeStructArray(e);
+   
+  //makeEmployeeStructArray(Employees e[]);
+
+    findEmployee(e , employeeNum);
     
-    for (int i = 0; i < employeeNum; i++){
-        printEmployee(e[i]);
-    }
+    //for (int i = 0; i < employeeNum; i++){
+      //  printEmployee(e[i]);
+ //   }
   
 }
 
@@ -43,7 +48,15 @@ int makeEmployeeStructArray(Employees e[]){
     
         return idx;
     }
-   void findEmployee(Employees e[], int numofRecords, string username);   
+   void findEmployee(Employees e[], int employeeNum){
+       int isPrinted = 0;
+       for (int i=0;i < employeeNum;i++){
+           if (e[i].salary > 100000){
+                 printEmployee(e[i]);
+                  isPrinted++ ;
+           }
+     }
+   }
     
     void printEmployee(Employees e){
     cout << "ID: " <<  e.id << " Name: " << e.name1 << " " << e.name2 << " salary: " << e.salary << " department: " << e.depName << " date: " << e.date;
